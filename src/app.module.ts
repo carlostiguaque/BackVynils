@@ -36,7 +36,7 @@ import { AlbumMusicianModule } from './albummusician/albummusician.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.DATABASE_URL && process.env.DATABASE_URL.replace('postgres://','').split(':')[1].split('@')[1] || process.env.DATABASE_URL || process.env.DB_HOST || 'localhost',
+      host: process.env.DATABASE_URL && process.env.DATABASE_URL.replace('postgres://','').split(':')[1].split('@')[1] || process.env.DATABASE_URL || process.env.DB_HOST || '123',
       port: 5432,
       username: process.env.DATABASE_URL && process.env.DATABASE_URL.replace('postgres://','').split(':')[0] || process.env.DB_USER || 'postgres',
       password: process.env.DATABASE_URL && process.env.DATABASE_URL.replace('postgres://','').split(':')[1].split('@')[0] || process.env.DB_PASSWORD || 'postgres',
